@@ -587,9 +587,10 @@ window.location.reload();
 
 
 
-async function mintA(quantity) {
+async function mintA() {
   //return new Promise(async(resolve, reject) => {
     $("#message").html("");
+    var quantity = $("#mint_quantity").val();
 console.log("loading....");
 $("#loader").css("display","block");
 const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -600,8 +601,8 @@ console.log(account)
     contract_address
   )
 
-  const price = quantity * 2000000000000000000;
-
+  const price = quantity * 50000000000000;
+console.log(price);
    await contract.methods
       .buy(quantity)
       .send({ from: accounts[0], value: price},
