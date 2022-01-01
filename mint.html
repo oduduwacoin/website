@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   
+<head>
+      <meta charset="utf-8"/>
+      <title>OduduwaCoin</title>
+      <meta name="description" content="OduduwaCoin - Yoruba Global Reserve Currency">
+      <meta name="keywords" content="OduduwaCoin">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="theme-color" content="#2e2a8f">
+      <!--website-favicon-->
+      <link href="images/favicon.png" rel="icon">
+      <!--plugin-css-->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/plugin.min.css" rel="stylesheet">
+      <link href="css/swiper.min.css" rel="stylesheet">
+      <link href="css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+      <!-- template-style-->
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/darkmode.css" rel="stylesheet">
+   </head>
+   <body>
+       <!-- Custom mouse start-->
+       <div class="mouse-cursor cursor"></div>
+       <div class="mouse-cursor cursor-follow"></div>
+       <!-- Custom mouse end-->
+
+       <style type="text/css">
+    
+    .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #000;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.menu-links a {
+   color:#050748;
+}
+
+    </style>
+  
+      <!--Start Header -->
+      <header class="header-pr nav-bg-b main-header navfix  menu-white" style="color: #050748;background: #fff;-webkit-box-shadow: 0 4px 6px 0 rgb(12 0 46 / 8%);box-shadow: 0 4px 6px 0 rgb(12 0 46 / 8%);">
+         <div class="container-fluid m-pad">
+            <div class="menu-header">
+               <div class="dsk-logo"><a class="nav-brand" href="index.html">
+                  <img src="images/logo.png" alt="Logo" class="mega-white-logo"/>
+                  <img src="images/logo.png" alt="Logo" class="mega-darks-logo"/>
+                  </a>
+               </div>
+               <div class="custom-nav" role="navigation">
+                  <ul class="nav-list">
+                     <li class="">
+                        <a href="index.html" class="menu-links" style="color:#050748;">Home</a>
+                        
+                     </li>
+
+                     <li class="">
+                        <a href="index.html#mint" class="menu-links" style="color:#050748;">Presale</a>
+                        
+                     </li>
+
+                     <li class="">
+                        <a href="index.html#who" class="menu-links" style="color:#050748;">About OduduwaCoin?</a>
+                        
+                     </li>
+
+                     <li class="">
+                        <a href="index.html#why" class="menu-links" style="color:#050748;">How it works?</a>
+                        
+                     </li>
+
+                     <li>
+                        <!--connect button-->
+                        <a href="#" onclick="connectWallet()" id="connectWallet" class="btn-br bg-btn3 btshad-b2 lnk">Connect Wallet <span class="circle"></span></a> 
+
+                        <!--disconnect button-->
+                        <a href="#" onclick="disconnectWallet()" style="display: none;" id="disconnectWallet" class="btn-br bg-btn3 btshad-b2 lnk"><span class="circle"></span></a> 
+                     </li>
+                        <!--<a href="#" class="menu-links right-bddr">&nbsp;</a>-->
+                        <!--menu right border-->
+                     <li class="contact-show">
+                       
+                      
+                     </li>
+              
+                  </ul>
+               </div>
+               <div class="mobile-menu2">
+                  <ul class="mob-nav2">
+                     <li>
+                        <a href="javascript:void()" id="bConnectWallet" onclick="connectWallet()" class="btn-round- trngl btn-br bg-btn btshad-b1" > 
+                           
+                           <i class="fas fa-wallet"></i>
+                        </a>
+                        <a href="javascript:void()" id="bDisconnectWallet" onclick="disconnectWallet()" class="btn-round- trngl btn-br bg-btn btshad-b1" style="display: none;"> 
+                           
+                            <i class="fas fa-wallet"></i>
+                         </a>
+                     </li>
+                     <li class="navm-"> 
+                        <a class="toggle" href="#">
+                        <span></span>
+                     </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--Mobile Menu-->
+            <nav id="main-nav">
+               <ul class="first-nav">
+                  <li>
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="index.html#mint">Presale</a>
+                  </li>
+                  <li>
+                     <a href="index.html#who">About OduduwaCoin?</a>
+                  </li>
+                  <li>
+                     <a href="index.html#why">How it Works?</a>
+                  </li>
+                  <li>
+                     <a href="index.html#how">Benefits?</a>
+                  </li>
+                  <li>
+                     <a href="javascript:void()" onclick="connectWallet()">Connect Wallet</a>
+                  </li>
+               </ul>
+              
+            </nav>
+         </div>
+      </header>
+    
+      <!--End Header -->
+
+     
+      <!--Start About-->
+      <section class="about-sec-app dark-bg2" id="mint">
+         <div class="container">
+
+       
+         </div>
+      </section>
+      <!--End About-->
+      <!--Start Portfolio-->
+      <section class="portfolio-section-nx">
+         <div class="container">
+             
+            <div class="col-md-5 mx-auto" style="margin-bottom:0px;" id="loading">
+                <div class="row justify-content-center ">
+                
+                    <divS style="" class="common-heading mb30" style="margin-top:30px;">
+                      
+                        <span style="float: left; margin-top:30px;">Loading...</span>
+ 
+                        <div style="float: left;" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                      
+                     </div>
+            </div>
+
+            <div class="col-md-5 mx-auto" style="margin-bottom:0px;display: none;" id="loggedOut">
+                <div class="row justify-content-center ">
+                
+                       <div class="common-heading mb30" style="margin-top:30px;">
+                         
+                          <h5>Presale is on!</h5>
+                        <p>Connect your wallet to start buying...</p>
+                       </div>
+                  
+                 </div>
+                <div class="row justify-content-center ">
+               
+                    <div class="col-md-6 col-sm-12 col-xs-12 col-12">
+                        <div class="input-group number-spinner" >
+                            <a href="#" onclick="connectWallet()" id="connectWallet" class="btn-br bg-btn3 btshad-b2 lnk" style="width:100%; margin-bottom:10px; text-align:center;">Connect Wallet<span class="circle"></span></a> 
+                        </div>
+                    </div>
+            </div>
+            </div>
+
+            <div class="col-md-5 mx-auto" style="margin-bottom:0px;display: none;" id="SaleEnded">
+               <div class="row justify-content-center ">
+               
+                      <div class="common-heading mb30" style="margin-top:30px;">
+                        
+                         <h5>Token Sale has ended!</h5>
+                       <p>Claim your purchased token below.</p>
+                       <hr/>
+                       <p id="claim_t"></p>
+                      </div>
+                 
+                </div>
+               <div class="row justify-content-center ">
+              
+                   <div class="col-md-6 col-sm-12 col-xs-12 col-12">
+                       <div class="input-group number-spinner" >
+                           <a href="#" onclick="claimToken()" id="claimToken" class="btn-br bg-btn3 btshad-b2 lnk" style="width:100%; margin-bottom:10px; text-align:center;">Claim Token<span class="circle"></span></a> 
+                       </div>
+                   </div>
+           </div>
+           </div>
+
+<div id="loggedIn" style="display: none;">
+            <div class="col-xs-12 col-sm-8 col-md-8 mx-auto" style="margin-bottom:0px;" >
+
+                <div class="row justify-content-center " style="white-space: normal;">
+                    <div class="col-12" >
+                    <div id="message" style="white-space:normal; margin-top:10px; padding:5px;"></div>
+             
+                </div>
+                    <div id="loader" style="display: none;" class="common-heading mb30" style="margin-top:30px;">
+                      
+                       <span style="float: left; margin-top:30px;">Loading...</span>
+
+                       <div style="float: left;" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                     
+                    </div>
+               
+              </div>
+
+                <div class="row justify-content-center ">
+                
+                       <div class="common-heading mb30" style="margin-top:10px;">
+                         
+                          <h5>OduduwaCoin Presale!</h5>
+                          <hr/>
+                          <h4>1 ODW Token = 0.00005 eth</h4>
+                          <h5>Quantity purchased: <span id="quantity_purchased"></span></h5>
+                       </div>
+                  
+                 </div>
+                <div class="row">
+                <div class="col-md-6 ">
+                    <div class="input-group number-spinner" style="padding-top:20px;">
+                        <input type="number" id="mint_quantity" value="1" min="500" max="300000" step="1" />
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                        <a href="javascript:void()" class="btn-outline lnk" onclick="mintToken()" style="width:100%; margin-bottom:10px; text-align:center; margin-top:10px;">Buy!<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                </div>
+            </div>
+            </div>
+            <hr />
+           
+                <div class="col-md-9 mx-auto" style="margin-bottom:20px;">
+                    <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 col-12">
+                    <div class="input-group number-spinner" >
+                        <a href="#" onclick="mintToken(1000)" class="btn-br bg-btn3 btshad-b2 lnk" style="width:100%; margin-bottom:10px; text-align:center;">Buy 1,000 ODW<span class="circle"></span></a> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group number-spinner" >
+                        <a href="#" onclick="mintToken(5000)" class="btn-br bg-btn3 btshad-b2 lnk" style="width:100%; margin-bottom:10px; text-align:center;">Buy 5,000 ODW <span class="circle"></span></a> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group number-spinner" >
+                        <a href="#" onclick="mintTOken(10000)" class="btn-br bg-btn3 btshad-b2 lnk" style="width:100%; margin-bottom:10px; text-align:center;">Buy 10,000 ODW <span class="circle"></span></a> 
+                    </div>
+                </div>
+            </div>
+            </div>
+           </div>
+            <div class="row mt10">
+
+               <div class="col-lg-12 col-sm-12 wptbb" id="who">
+                  <div class="pbwide shadow bg-gradient1">
+                
+                       <div class="row">
+                       <h2 class="mb30"><span class="text-second text-bold">How to</span> buy?</h2>
+                     
+                       <p class="wow fadeInUp animated" data-wow-delay=".25s" style=" visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">Enter the quantity of ODW token you want to purchase. Click on buy or use the buttons to buy the specified quantities.</p><p class="wow fadeInUp animated" data-wow-delay=".25s" style=" visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">After purchasing, wait for presale to end. A claim button will show and you can claim your purchased tokens.</p>
+                     </div>
+                 
+                   
+                  </div>
+                </div>
+
+            </div>
+         </div>
+      </section>
+
+  
+      <!--Start Footer-->
+      <footer class="footerdez footerdex dark-footer pt10 pb20">
+         <div class="container">
+            <div class="row justify-content-between">
+              
+
+               <div class="col-lg-7 col-sm-12">
+                
+                  <div class="row fttlnks flexend">
+                     <div class="col-lg-4 col-sm-6 pt60">
+                        <h5>Follow Us</h5>
+                        <div class="ff-social-icons mt30">
+                           <a href="https://twitter.com/twitter" target="blank"><i class="fab fa-twitter"></i></a>
+                           <a href="https://instagram.com/oduduwacoin" target="blank"><i class="fab fa-instagram"></i></a>
+                           <a href="https://t.me/+EDHs9u9Jyy8xMjJk" target="blank"><i class="fab fa-telegram"></i></a>
+                           <a href="https://www.reddit.com/u/Oduduwacoin?" target="blank"><i class="fab fa-reddit"></i></a>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 pt60">
+                        <div class="footer-copyrights-">
+                           <p>Copyright 2022 OduduwaCoin.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--End Footer-->
+      <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script> 
+      <script src="js/plugin.min.js"></script>
+      <script src="js/swiper.min.js"></script>
+      <script src="js/tweenmax.min.js"></script>
+      <script src="js/bootstrap-input-spinner.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+      <!--common script file-->
+      <script src="js/main.js"></script>
+      <script>
+        $("input[type='number']").inputSpinner();
+
+        const web3 = new Web3(window.ethereum);
+
+console.log(web3);
+const token = "0x0F726FBFe636893F75eb48909D1f2CD12823fdF7";
+const contract_address = "0x071DAb8e7d337311ec218Cb9fb857eCd39CC31b7";
+  const  abi = [{"inputs":[{"internalType":"address payable","name":"_wallet","type":"address"},{"internalType":"contract ERC20","name":"_presale_token","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"balance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_quantity","type":"uint256"}],"name":"buy","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"checkClaimed","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"claim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"claimed","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"getBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"presale_token","outputs":[{"internalType":"contract ERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"saleOn","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"toggleSale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"token_price","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}];
+
+const contract = new web3.eth.Contract(
+    abi,
+    contract_address
+  )
+
+async function disconnectWallet(){
+ 
+   /*const walletAddress = await window.ethereum.request({
+      method: "eth_requestAccounts",
+      params: [
+        {
+          eth_accounts: {}
+        }
+      ]
+    });
+
+    await window.ethereum.request({
+        method: "wallet_requestPermissions",
+        params: [
+          {
+            eth_accounts: {}
+          }
+        ]
+      });*/
+
+      localStorage.connected = false;
+      alert("You have disconnected!");
+      window.location.reload();
+
+}
+       async function init(){
+
+         console.log(localStorage.connected);
+
+          const chainId = await ethereum.request({method: "eth_chainId"});
+
+         console.log(chainId);
+
+         ethereum.on('accountsChanged', (accounts) => {
+  // Handle the new accounts, or lack thereof.
+  // "accounts" will always be an array, but it can be empty.
+  alert("Account Changed!")
+  window.location.reload();
+});
+
+ethereum.on('chainChanged', (chainId) => {
+  // Handle the new chain.
+  // Correctly handling chain changes can be complicated.
+  // We recommend reloading the page unless you have good reason not to.
+  alert("Network Changed!")
+  window.location.reload();
+  
+});
+
+if(localStorage.connected=="true"){
+
+         const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+         const account = accounts[0];
+         console.log(account);
+         const walletAddress = account;
+         const walletAddress1 = walletAddress.substring(0,2);
+         const walletAddress2 = walletAddress.substring(38);
+          console.log("wallet is connected!");
+
+            if(account!=undefined||account!=""){
+                if(chainId!=4){
+                 alert("Please change network to Ethereum Mainnet");
+                 return false;
+             }
+             await contract.methods.checkClaimed(account).call( (err, data) => {
+          //console.log(data);
+               if(data==true){
+                  $("#claim_t").html("You have already claimed your purchased token and it's currently in your wallet");
+               }
+             });
+             await contract.methods.getBalance(account).call( (err, data) => {
+          //console.log(data);
+               if(data==0){
+                  $("#quantity_purchased").html("0");
+               }
+               else {
+                  $("#quantity_purchased").html(data/1000000000000000000+" ODW");
+               }
+             });
+             await contract.methods.saleOn().call( (err, data) => {
+          if (err) {
+            //reject(err)
+            console.log(err);
+          }
+
+          console.log(data);
+          //resolve(data)
+          if(data==false){
+            $("#loggedOut").css("display","none");
+
+$("#loggedIn").css("display","none");
+
+$("#SaleEnded").css("display","block");
+
+$("#claim_t").html("Before claiming token, add the token smart contract to your wallet. The token smart contract address is:"+token);
+          }else {
+            $("#loggedOut").css("display","none");
+            $("#SaleEnded").css("display","none");
+$("#loggedIn").css("display","block");
+          }
+        }
+      )
+          
+
+             $("#connectWallet").css("display","none");
+
+             $("#mConnectWallet").css("display","none");
+
+             $("#bConnectWallet").css("display","none");
+
+             $("#disconnectWallet").css("display","block");
+
+             $("#mDisconnectWallet").css("display","block");
+
+             $("#bDisconnectWallet").css("display","block");
+
+             $("#disconnectWallet").text("Disconnect "+walletAddress1+"..."+walletAddress2);
+
+            }
+
+         }
+
+         if(!localStorage.connected||localStorage.connected=="false"){
+
+            $("#loggedOut").css("display","block");
+
+         }
+
+         $("#loading").css("display","none");
+
+       }
+
+       init();
+
+        async function connectWallet(){
+
+            $("#message").html("");
+
+            $("#loader").css("display","block");
+
+            try{
+  
+         if (typeof window.ethereum == 'undefined') {
+            alert('Use MetaMask Browser or Install Metamask Extension!');
+            }
+            //const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            //console.log(accounts);
+            //const account = accounts[0];
+            /*
+         const wallet = await window.ethereum.request({
+        method: "wallet_requestPermissions",
+        params: [
+          {
+            eth_accounts: {}
+          }
+        ]
+      });*/
+
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const account = accounts[0];
+      console.log(account);
+
+      const chainId = await ethereum.request({method: "eth_chainId"});
+
+      if(chainId!=4){
+
+alert("Please change network to FTM Mainnet");
+return false;
+
+}
+
+      if(account!=undefined||account!=""){
+
+   if (localStorage.connected) {
+  localStorage.connected = true;
+} else {
+  localStorage.connected = false;
+}
+window.location.reload();
+      }
+      
+    }
+    catch(err){
+
+            $("#loader").css("display","none");
+
+            $("#message").html(err.message);
+
+        console.log(err.message);
+    }
+         }
+
+
+
+async function mintA(quantity) {
+  //return new Promise(async(resolve, reject) => {
+    $("#message").html("");
+console.log("loading....");
+$("#loader").css("display","block");
+const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+const account = accounts[0];
+console.log(account)
+  const contract = new web3.eth.Contract(
+    abi,
+    contract_address
+  )
+
+  const price = quantity * 2000000000000000000;
+
+   await contract.methods
+      .buy(quantity)
+      .send({ from: accounts[0], value: price},
+        (err, data) => {
+          if (err) {
+            //reject(err)
+            console.log(err);
+            $("#message").html(err.message);
+            $("#loader").css("display","none");
+            return false;
+          }
+          const resp = "<p>Your transaction has been initiated. Tx is :"+data+". <a target='_blank' href='https://rinkeby.etherscan.io/tx/"+data+"'>Check transaction here</a></p>";
+          $("#message").html(resp);
+          $("#loader").css("display","none");
+          console.log(data);
+          //resolve(data)
+        }
+      )
+  //})
+}
+
+async function mintToken(quantity) {
+    $("#message").html("");
+  //return new Promise(async(resolve, reject) => {
+console.log("loading....");
+$("#loader").css("display","block");
+const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+const account = accounts[0];
+console.log(account)
+  const contract = new web3.eth.Contract(
+    abi,
+    contract_address
+  )
+
+  const price = parseInt(quantity) * 50000000000000;
+  console.log(price);
+   await contract.methods
+      .buy(quantity)
+      .send({ from: accounts[0], value: price},
+        (err, data) => {
+          if (err) {
+       //reject(err)
+       console.log(err);
+            $("#message").html(err.message);
+            $("#loader").css("display","none");
+            return false;
+          }
+          const resp = "<p>Your transaction has been initiated. Tx is :"+data+". <a href='https://rinkeby.etherscan.io/tx/"+data+"'>Check transaction here</a></p>";
+          $("#message").html(resp);
+          $("#loader").css("display","none");
+          console.log(data);
+          //resolve(data)
+        }
+      )
+  //})
+}
+
+async function claimToken() {
+  //return new Promise(async(resolve, reject) => {
+    $("#message").html("");
+console.log("loading....");
+$("#loader").css("display","block");
+const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+const account = accounts[0];
+console.log(account)
+  const contract = new web3.eth.Contract(
+    abi,
+    contract_address
+  )
+
+   await contract.methods
+      .claim()
+      .send({ from: accounts[0]},
+        (err, data) => {
+          if (err) {
+            //reject(err)
+            console.log(err);
+            $("#message").html(err.message);
+            $("#loader").css("display","none");
+            return false;
+          }
+          const resp = "<p>Your transaction has been initiated. Tx is :"+data+". <a target='_blank' href='https://rinkeby.etherscan.io/tx/"+data+"'>Check transaction here</a></p>";
+          $("#message").html(resp);
+          $("#loader").css("display","none");
+          console.log(data);
+          //resolve(data)
+        }
+      )
+  //})
+}
+
+         </script>
+   </body>
+
+</html>

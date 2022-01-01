@@ -46,7 +46,7 @@
                      </li>
 
                      <li class="">
-                        <a href="#presale" class="menu-links">Presale</a>
+                        <a href="#mint" class="menu-links">Presale</a>
                         
                      </li>
 
@@ -64,6 +64,8 @@
                         <a href="#how" class="menu-links">Community Benefits?</a>
                         
                      </li>
+
+                     
                  
                      <li>
                         <!--<a href="#" class="menu-links right-bddr">&nbsp;</a>-->
@@ -260,7 +262,7 @@
                      </div>
                      <div class="col-lg-6 pt60">
                         <div class="footer-copyrights-">
-                           <p>Copyright 2021 OduduwaCoin.</p>
+                           <p>Copyright 2022 OduduwaCoin.</p>
                         </div>
                      </div>
                   </div>
@@ -354,7 +356,7 @@ ethereum.on('chainChanged', (chainId) => {
 
          //stop the counter
          function stop_counter(){
-            document.getElementById("countdown").innerHTML = "<a href='mint.html'>Mint!</a>";
+            document.getElementById("countdown").innerHTML = "<a href='mint.html'>Buy Now!</a>";
             countDownDate = new Date("Oct 30, 1992 00:50:00 ").getTime();
          }
          // Set the date we're counting down to
@@ -382,7 +384,7 @@ ethereum.on('chainChanged', (chainId) => {
            // If the count down is finished, write some text
            if (distance < 0) {
              clearInterval(x);
-             document.getElementById("countdown").innerHTML = "<a href='mint.html'>Mint!</a>";
+             document.getElementById("countdown").innerHTML = "<a href='mint.html'>Buy Now!</a>";
            }
          }, 1000);
          </script>
